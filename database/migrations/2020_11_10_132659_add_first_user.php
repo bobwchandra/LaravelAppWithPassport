@@ -10,7 +10,7 @@ class AddFirstUser extends Migration
     {
         DB::table('users')->insert(
             array(
-                'name' => 'testUser',
+                'name' => 'adminUser',
                 'phone' => '8912345678',
                 'password' => '$2y$12$JZX7bNyaNr3QARKXaNzofONB/oRZkSri.RRenFR6MGVX29bDlI3c6',
                 'roleId' => '1',

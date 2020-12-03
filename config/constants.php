@@ -1,12 +1,12 @@
-<?php 
+<?php
 
 return [
-	"Messages"=>
-	[
-		'PhoneNumberWithout62' => 'Silahkan mulai masuk nomor telpon dari angka 8',
-		'UserNotFound' => 'Nomor yang anda masukan salah',
+    "Messages" =>
+    [
+        'PhoneNumberWithout62' => 'Masukan nomor telepon anda tanpa angka 0 (nol) di depannya',
+        'UserNotFound' => 'Pengguna tidak ditemukan',
         'UserAlreadyExists' => 'Nomor telepon telah digunakan. Mohon menggunakan nomor lain.',
-		'IncorrectCredentials' => 'Nomor telepon dan password salah.'
-	]
+        'IncorrectCredentials' => 'Kredensial salah.',
+    ],
 
 ];

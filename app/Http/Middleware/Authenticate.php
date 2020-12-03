@@ -15,15 +15,13 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if ($request->expectsJson()) {   
-            $error = Helper::errorStatus(401);
-            $error["error"]['message']= 'Username dan password salah';
-            error_log('invalid cred');
-            return response()->json($error, 401); 
+        if ($request->expectsJson()) {
+            $error = array();
+            $error["error"] = ["message" => config("constants.Messages.IncorrectCredentials")];
+            $error['code'] = 403;
+            return response($error, 403);
         }
 
-        error_log('forbid');
-
-        return response()->json("Forbidden", 403);
+        return route('forbiddenError');
     }
 }
